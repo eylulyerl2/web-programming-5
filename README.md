@@ -5,25 +5,19 @@ A small React app built with Vite. It shows a static product list that can be to
 ## File Organization
 
 ```text
-assignment5/
+web-programming-5/
 ├── src/
 │   ├── components/
-│   │   ├── Card.jsx
-│   │   ├── Product.jsx
-│   │   └── ProductList.jsx
-│   ├── App.jsx
-│   └── main.jsx
-├── index.html
-└── package.json
+│   │   ├── Card.jsx          -> a box with border, padding and margin, shows its children
+│   │   ├── Product.jsx       -> shows one product (title and price) inside a Card
+│   │   └── ProductList.jsx   -> has the product array and draws them with map()
+│   ├── App.jsx               -> main component, has the state, button and input
+│   └── main.jsx              -> starts the app and puts App into the page
+├── index.html                -> the page with the root div
+└── package.json              -> project info and dependencies (React, Vite)
 ```
 
-- **main.jsx** – Entry point, renders `App` into `#root`.
-- **App.jsx** – Root component. Holds `showProducts` and `name` state, renders the button, the controlled input, the greeting, and `ProductList` only when `showProducts` is true.
-- **ProductList.jsx** – Defines the static product array and renders a `Product` for each item with `.map()`, using `id` as the key.
-- **Product.jsx** – Stateless component that shows `title` and `price` from props inside a `Card`.
-- **Card.jsx** – Layout wrapper that renders its `children` with border, padding and margin.
-
-Styling is done with inline styles.
+Styling is done with inline styles, so there is no separate CSS file.
 
 ## Challenges I Faced
 
